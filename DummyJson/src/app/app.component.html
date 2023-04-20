@@ -1,7 +1,7 @@
 
 
 
-<p-table  [tableStyle]="{ 'min-width': '50rem' }">
+<p-table  [tableStyle]="{ 'min-width': '50rem' }" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[10,20,30]">
   <ng-template pTemplate="header">
       <tr>
           <th>Id</th>
