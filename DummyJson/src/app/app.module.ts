@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableModule } from 'primeng/table';
 import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { EffectsModule } from '@ngrx/effects/src';
+import { UserEffects } from './ngrxTools/effects';
+import { StoreModule } from '@ngrx/store';
+import{reducer} from './ngrxTools/get.reducer'
 @NgModule({
   declarations: [
     AppComponent
@@ -13,8 +17,8 @@ import{ BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     TableModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
+    EffectsModule.forFeature([UserEffects])
 
   ],
   providers: [],
